@@ -20,7 +20,7 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js(x?)$/,
-				loaders: ['babel-loader?cacheDirectory,presets[]=react,presets[]=es2015'],
+				loaders: ['babel-loader?cacheDirectory,presets[]=react,presets[]=es2015,presets[]=stage-0'],
 				include: path.join(__dirname, 'src')
 			}
     ]
