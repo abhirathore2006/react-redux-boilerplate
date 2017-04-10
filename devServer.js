@@ -8,15 +8,11 @@ var compiler = webpack(config);
 
 //for logging
 var morgan      = require('morgan');
+var jsonServer = require('json-server');
 
 //for authentication
 var bodyParser  = require('body-parser');
 var jwt    = require('jsonwebtoken');
-
-//json server
-var jsonServer = require('json-server');
-const middlewares = jsonServer.defaults();
-app.use(middlewares);
 
 //serve satic files form
 app.use(express.static('./src/client/assets'));
@@ -93,7 +89,7 @@ var apiRoutes = express.Router();
 	        return res.json({ success: false, message: 'Failed to authenticate token.' });
 	      } else {
 	        // if everything is good, save to request for use in other routes
-	        req.decoded = decoded;
+	        req.user = decoded;
 	        next();
 	      }
 	    });
