@@ -15,8 +15,6 @@ var jwt    = require('jsonwebtoken');
 
 //json server
 var jsonServer = require('json-server');
-const middlewares = jsonServer.defaults();
-app.use(middlewares);
 
 //serve satic files form
 app.use(express.static('./src/client/assets'));
