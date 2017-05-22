@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Home</title>
   <style>
-  .select-search-box {
+  /*.select-search-box {
   	width: 300px;
   	position: relative;
   }
@@ -72,9 +72,7 @@
 
   	.select-search-box--multiple .select-search-box__select {
   		display: none;
-  		/*position: static;
-  		box-shadow: none;
-  		border: none;*/
+
   	}
 
   		.select-search-box__select--display {
@@ -108,7 +106,29 @@
   			.select-search-box__option--selected:hover, .select-search-box__option--selected.select-search-box__option--hover {
   				background: #4A5259;
   				color: #f7f7f1;
-  			}
+  			}*/
+        .select-search-container{
+          position: relative;
+          margin: 10px;
+        }
+        .select-search-options{
+          position: absolute;
+          top:30;
+          background: white;
+          z-index: 99999;
+          border: 1px solid #eee;
+        }
+        .select-search-option{
+          cursor: pointer;
+        }
+
+        .select-search-option.option_selected{
+          background-color: #dedede;
+        }
+        .select-search-option span{
+          margin: 10px;
+          position: absolute;
+        }
   </style>
 </head>
 <body>
